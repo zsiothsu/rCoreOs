@@ -1,5 +1,15 @@
-目录构成
+# rCoreOs
 
->./bootloader 运行于硬件层的裸机程序，提供了rust os的 SBI
->./os 运行于 S 层的操作系统程序，并为 U 层提供API，使用qemu-system-riscv64运行
->./user 运行于 U 层，运行于 os 层或 qemu-riscv64 提供的系统层
+This project is used as the learning and use of operating system courses,
+
+**rCoreOs** is an operating system based on the RISC-V architecture, written in rust, and can run on qemu and K210. The reference tutorial is the operating system textbook [rCore-Tutorial-Book Third Edition](https://rcore-os.github.io/rCore-Tutorial-Book-v3/index.html) written by Professor Chen Yu of Tsinghua University and his student Wu Yifan.
+
+This project modified some structure and code on  origial one, and there are reports for each chapter in the `report` folder.
+
+## Directory composition
+
+>./bootloader/ Program running on the hardware layer, providing SBI of rust os
+>./kernel/ Operating system kernel running on the S layer, and provides API for the U layer, using qemu-system-riscv64 to run
+>./user/ Runs on the U layer, runs on the os layer or the system layer provided by qemu-riscv64
+>./reports/ Reports
+>./Makefile & ./linker.sh project build script
